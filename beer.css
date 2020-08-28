@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* outline: 1px solid #f00; */
+}
+
+body {
+    background: rgb(247, 231, 142);
+}
+
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    text-shadow: 1px 2px rgba(0, 0, 0, .5);
+    text-decoration-color: tomato;
+    color: teal;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.hover-box {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    background: transparent;
+    z-index: 10;
+}
+
+.cup {
+    width: 230px;
+    height: 350px;
+    background-image: linear-gradient(rgba(255, 248, 225, 0.7), rgba(235, 229, 204, 0.699));
+    /* opacity: .5; */
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.beer {
+    width: 200px;
+    height: 300px;
+    background: radial-gradient(#f8da76, #ffc408);
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: all 1s linear;
+}
+
+.handle-bg {
+    width: 105px;
+    height: 190px;
+    background: linear-gradient(rgba(255, 248, 225, 0.7), rgba(228, 224, 210, 0.699));
+    position: absolute;
+    border-radius: 30px;
+    top: 80px;
+    right: -50px;
+    z-index: -1;
+}
+
+.handle {
+    width: 55px;
+    height: 140px;
+    background: rgb(247, 231, 142);
+    /* border: 25px solid rgba(255, 248, 225, 0.7); */
+    position: absolute;
+    border-radius: 30px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+}
+
+.foam {
+    width: 200px;
+    height: 60px;
+    background: rgb(253, 240, 202);
+    /* opacity: .8; */
+}
+
+.top-circle,
+.bottom-circle {
+    border-radius: 50%;
+    background: rgb(253, 240, 202);
+    opacity: .8;
+    position: absolute;
+    /* outline: 1px solid blue; */
+}
+
+.top_1 {
+    width: 50px;
+    height: 50px;
+    top: -25px;
+}
+
+.top_2 {
+    width: 100px;
+    height: 100px;
+    left: 30px;
+    top: -40px;
+}
+
+.top_3 {
+    width: 30px;
+    height: 30px;
+    left: 110px;
+    top: -40px;
+}
+
+.top_4 {
+    width: 80px;
+    height: 80px;
+    right: 0;
+    top: -30px;
+}
+
+.bottom_1 {
+    width: 10px;
+    height: 10px;
+    bottom: 0px;
+    /* bottom: 30px; */
+    left: 50px;
+    opacity: 0;
+    /* transition: all ease-out .2s; */
+
+}
+
+.bottom_2 {
+    width: 15px;
+    height: 15px;
+    bottom: 0px;
+    /* bottom: 80px; */
+    left: 100px;
+    opacity: 0;
+    /* transition: all ease-out .2s; */
+}
+
+.bottom_3 {
+    width: 20px;
+    height: 20px;
+    bottom: 0px;
+    /* bottom: 100px; */
+    left: 40px;
+    opacity: 0;
+    /* transition: all ease-out .2s; */
+}
+
+.bottom_4 {
+    width: 25px;
+    height: 25px;
+    bottom: 0px;
+    /* bottom: 180px; */
+    left: 140px;
+    opacity: 0;
+    /* transition: all ease-out .2s; */
+}
+
+.vapor {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    position: absolute;
+}
+
+.bubbles1 {
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(to top left, rgb(247, 231, 142), #fff);
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    right: -20px;
+    opacity: 0;
+    transition: all 3s;
+}
+
+.bubbles2 {
+    width: 15px;
+    height: 15px;
+    background: linear-gradient(to top left, rgb(247, 231, 142), #fff);
+    border-radius: 50%;
+    position: absolute;
+    top: -80px;
+    right: -50px;
+    opacity: 0;
+    transition: all 8s;
+}
+
+/* 
+.hover-box~.beer .bubble>.bottom-circle {
+    animation: bubbleUp infinite linear 1s;
+} */
+
+.hover-box~.vapor .bubbles1,
+.hover-box~.vapor .bubbles2 {
+    opacity: 1;
+}
+
+.hover-box~.beer {
+    background: radial-gradient(#f8e193, #ffc408);
+}
+
+.hover-box~.beer .bottom_1 {
+    animation: bubbleUp infinite ease-out 5s;
+}
+
+.hover-box~.beer .bottom_2 {
+    animation: bubbleUp infinite ease-out 4s;
+}
+
+.hover-box~.beer .bottom_3 {
+    animation: bubbleUp infinite ease-out 3s;
+}
+
+.hover-box~.beer .bottom_4 {
+    animation: bubbleUp infinite ease-out 2s;
+}
+
+@keyframes bubbleUp {
+    0% {
+        opacity: 0.5;
+        bottom: 0;
+    }
+
+    50% {
+        opacity: 1;
+        bottom: 50%;
+    }
+
+    100% {
+        opacity: 0;
+        bottom: 85%;
+    }
+}
